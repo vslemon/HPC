@@ -1,1 +1,3 @@
-# HPC
+# CUDA Histogram Equalization
+## Histogram equalization is a method in image processing of contrast adjustment using the image's histogram. 
+This program is implemented so that the histogram calculation and the calculation of the final image is shared between the cpu and gpu in order to work in parallel but and have cpu calculations done during data transfers to and from the gpu. However, we noticed that for the specific sizes of the four images it is better for all the calculations to be done on the gpu. Instead for larger images we constructed we noticed that there is indeed an improvement in times when the work is shared.
